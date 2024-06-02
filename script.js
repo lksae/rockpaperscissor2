@@ -65,7 +65,28 @@ function playGame(){
     }
 }*/
 
-playGame()
+//playGame()
         //console.log(humanScore);
         //console.log(computerScore);
 
+const pressedButton = document.querySelector('#choices');
+pressedButton.addEventListener("click", function(event) {
+    let computerChoice = getComputerChoice();
+    let humanChoice = "";
+    
+    
+    let target = event.target;
+
+    switch(target.id) {
+        case "rock": 
+            humanChoice = "rock";
+            break;
+        case "paper":
+            humanChoice = "paper";
+            break;
+        case "scissor":
+            humanChoice = "scissor";
+            break;
+        }
+    playRound(humanChoice,computerChoice);
+    })
