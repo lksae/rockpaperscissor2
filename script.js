@@ -70,6 +70,9 @@ function playGame(){
         //console.log(computerScore);
 
 const pressedButton = document.querySelector('#choices');
+const humanScoreText = document.querySelector("#humanScore");
+const computerScoreText = document.querySelector("#computerScore");
+
 pressedButton.addEventListener("click", function(event) {
     let computerChoice = getComputerChoice();
     let humanChoice = "";
@@ -89,4 +92,19 @@ pressedButton.addEventListener("click", function(event) {
             break;
         }
     playRound(humanChoice,computerChoice);
+
+    humanScoreText.textContent = "Your Score: " + humanScore;
+    computerScoreText.textContent = "Computer Score: " + computerScore;
+
+    computerChoiceDiv = document.querySelector("#computerChoice");
+    computerChoiceDiv.textContent = "Computer choose: " + computerChoice;
+
+    if(computerScore == 5) {
+        alert("Computer won! Refresh the page to play again.")
+    }
+
+    if(humanScore == 5) {
+        alert("You won! Refresh the page to play again.")
+    }
+
     })
