@@ -49,6 +49,7 @@ function playRound(humanChoice, computerChoice) {
     counter += 1;
 }
 
+/*
 function playGame(){
     while (counter < 5) {
         const humanSelection = getHumanChoice();
@@ -62,7 +63,7 @@ function playGame(){
     } else {
         console.log("It's a draw. Again...")
     }
-}
+}*/
 
 playGame()
         //console.log(humanScore);
